@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balogh Bence — Prémium Barber</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, 0.9);
+      border-bottom: 1px solid #292929;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #c9a227;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
+        radial-gradient(circle at center, #333 0%, #090909 60%);
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 9vw, 100px);
+      letter-spacing: 8px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #bbb;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #c9a227;
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 3px;
+      transition: .3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #e1bd3d;
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      padding: 35px;
+      background: #121212;
+      border: 1px solid #292929;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #c9a227;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .price {
+      color: #c9a227;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .about {
+      background: #101010;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      color: #bbb;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      border-top: 1px solid #292929;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">URBAN CUTS</div>
+
+  <nav>
+    <a href="#szolgaltatasok">Szolgáltatások</a>
+    <a href="#rolunk">Rólunk</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>URBAN CUTS</h1>
+    <p>Prémium barber élmény. Precíz munka.személyre szabott stílus.</p>
+    <a href="#kapcsolat" class="button">IDŐPONTFOGLALÁS</a>
+  </div>
+</section>
+
+<section id="szolgaltatasok">
+  <h2 class="section-title">Szolgáltatások</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Classic Haircut</h3>
+      <p>Klasszikus férfi hajvágás, személyre szabva.</p>
+      <div class="price">5 000 Ft</div>
+    </div>
+
+    <div class="card">
+      <h3>Skin Fade</h3>
+      <p>Precíz fade modern, letisztult megjelenéssel.</p>
+      <div class="price">6 000 Ft</div>
+    </div>
+
+    <div class="card">
+      <h3>Hair + Beard</h3>
+      <p>Hajvágás és szakálligazítás egy csomagban.</p>
+      <div class="price">8 000 Ft</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="rolunk" class="about">
+  <h2 class="section-title">Rólunk</h2>
+
+  <p>
+    Az Urban Cuts célja, hogy minden vendég magabiztosan távozzon.
+    Modern felszerelések, prémium környezet és személyre szabott stílus
+    egy helyen.
+  </p>
+</section>
+
+<section id="kapcsolat" class="contact">
+  <h2 class="section-title">Foglalj időpontot</h2>
+
+  <p>📍 Budapest, Példa utca 12.</p>
+  <p>📞 +36 30 123 4567</p>
+  <p>📧 hello@urbancuts.hu</p>
+
+  <br>
+
+  <a href="tel:+36301234567" class="button">
+    HÍVÁS
+  </a>
+</section>
+
+<footer>
+  © 2026 Urban Cuts — Minta weboldal
+</footer>
+
+</body>
+</html>
